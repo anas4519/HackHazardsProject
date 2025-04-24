@@ -66,7 +66,7 @@ export default function LandingPage() {
             </p>
 
             <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-5">
-              <a href="/path/to/coincentrate.dmg" download>
+              <a href="https://github.com/anas4519/HackHazardsProject/releases/download/1.0.0/coincentrate.dmg" download>
                 <button className="group relative overflow-hidden inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-xl shadow-xl text-white bg-gradient-to-br from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
                   <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-indigo-500/10 to-purple-500/10"></div>
                   <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
@@ -79,18 +79,20 @@ export default function LandingPage() {
                 </button>
               </a>
               
-              <button className="group relative overflow-hidden inline-flex items-center justify-center px-8 py-4 mt-4 sm:mt-0 border border-transparent text-base font-medium rounded-xl shadow-xl text-white bg-gradient-to-br from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
-                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10"></div>
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                <div className="absolute bottom-0 right-0 w-10 h-10 bg-white/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 group-hover:scale-150 transition-all duration-700"></div>
-                <img 
-                  src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" 
-                  alt="Windows Logo" 
-                  className="w-6 h-6 mr-3 filter brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-300 relative z-10"
-                />
-                <span className="font-semibold relative z-10">Download for Windows</span>
-                <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1 relative z-10" />
-              </button>
+              <a href="https://github.com/sarthakkjha/session-success-stack">
+                <button className="group relative overflow-hidden inline-flex items-center justify-center px-8 py-4 mt-4 sm:mt-0 border border-transparent text-base font-medium rounded-xl shadow-xl text-white bg-gradient-to-br from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
+                  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10"></div>
+                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  <div className="absolute bottom-0 right-0 w-10 h-10 bg-white/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 group-hover:scale-150 transition-all duration-700"></div>
+                  <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Windows_logo_-_2012.svg" 
+                    alt="Windows Logo" 
+                    className="w-6 h-6 mr-3 filter brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity duration-300 relative z-10"
+                  />
+                  <span className="font-semibold relative z-10">Download for Windows</span>
+                  <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1 relative z-10" />
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -165,6 +167,10 @@ export default function LandingPage() {
             <p className="mt-4 text-lg text-gray-400 max-w-2xl mx-auto">
               Follow these simple steps to get started with Coincentrate on your system.
             </p>
+            <div className="mt-6 p-4 bg-yellow-500/10 border border-yellow-500/20 rounded-lg text-sm text-yellow-300 mx-auto max-w-3xl">
+              <p className="font-medium">Important Note:</p>
+              <p className="mt-1">Due to integration issues with Screenpipe, the application may not function properly in production environments. We kindly request that you evaluate our project through our demonstration video (<a href="https://youtu.be/uHFlMRPbpEc" className="underline">video link</a>). If you would like to test the application directly, please visit our GitHub repository (<a href="https://github.com/sarthakkjha/session-success-stack" className="underline">github link</a>) and follow the instructions to install and run it in development mode.</p>
+            </div>
           </div>
           
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
@@ -457,7 +463,7 @@ export default function LandingPage() {
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">Impact Transparency</h3>
                 <p className="text-gray-400 max-w-2xl">
-                  All contributions are recorded on the blockchain, providing complete transparency. We partner with verified educational NGOs in India to ensure your contributions create meaningful change.
+                  All contributions are recorded on the blockchain, providing complete transparency. We will partner with verified educational NGOs in India to ensure your contributions create meaningful change.
                 </p>
               </div>
               <div className="shrink-0">
