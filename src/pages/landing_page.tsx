@@ -3,6 +3,8 @@ import { Timer, Heart, Shield, ArrowRight, Star } from 'lucide-react';
 
 export default function LandingPage() {
   const [isVisible, setIsVisible] = useState(false);
+  const [macInstallMethod, setMacInstallMethod] = useState("website");
+  const [winInstallMethod, setWinInstallMethod] = useState("website");
 
   useEffect(() => {
     setIsVisible(true);
@@ -64,16 +66,18 @@ export default function LandingPage() {
             </p>
 
             <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-5">
-              <button className="group relative overflow-hidden inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-xl shadow-xl text-white bg-gradient-to-br from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
-                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-indigo-500/10 to-purple-500/10"></div>
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                <div className="absolute bottom-0 right-0 w-10 h-10 bg-white/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 group-hover:scale-150 transition-all duration-700"></div>
-                <svg className="w-6 h-6 mr-3 text-white/90 group-hover:text-white transition-colors duration-300 relative z-10" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
-                </svg>
-                <span className="relative font-semibold z-10">Download for macOS</span>
-                <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1 relative z-10" />
-              </button>
+              <a href="/path/to/coincentrate.dmg" download>
+                <button className="group relative overflow-hidden inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-medium rounded-xl shadow-xl text-white bg-gradient-to-br from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
+                  <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-indigo-500/10 to-purple-500/10"></div>
+                  <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  <div className="absolute bottom-0 right-0 w-10 h-10 bg-white/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 group-hover:scale-150 transition-all duration-700"></div>
+                  <svg className="w-6 h-6 mr-3 text-white/90 group-hover:text-white transition-colors duration-300 relative z-10" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+                  </svg>
+                  <span className="relative font-semibold z-10">Download for macOS</span>
+                  <ArrowRight className="ml-3 h-5 w-5 transition-transform group-hover:translate-x-1 relative z-10" />
+                </button>
+              </a>
               
               <button className="group relative overflow-hidden inline-flex items-center justify-center px-8 py-4 mt-4 sm:mt-0 border border-transparent text-base font-medium rounded-xl shadow-xl text-white bg-gradient-to-br from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
                 <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10"></div>
@@ -180,26 +184,76 @@ export default function LandingPage() {
                 <li className="flex">
                   <span className="flex-shrink-0 font-bold text-indigo-400 mr-3">1.</span>
                   <div>
-                    <p className="font-medium">Download the installer</p>
-                    <p className="mt-1 text-gray-400">Click the "Download for macOS" button above to get the latest version of Coincentrate.</p>
+                    <p className="font-medium">Install Screenpipe on your system.</p>
+                    <div className="mt-1 text-gray-400 flex space-x-4">
+                      <button 
+                        className={`px-3 py-1 rounded-md transition-colors ${macInstallMethod === 'website' ? 'bg-indigo-500/20 text-white' : 'bg-gray-700/50 hover:bg-gray-700/70'}`}
+                        onClick={() => setMacInstallMethod('website')}
+                      >
+                        Website Download
+                      </button>
+                      <button 
+                        className={`px-3 py-1 rounded-md transition-colors ${macInstallMethod === 'cli' ? 'bg-indigo-500/20 text-white' : 'bg-gray-700/50 hover:bg-gray-700/70'}`}
+                        onClick={() => setMacInstallMethod('cli')}
+                      >
+                        CLI Installation
+                      </button>
+                    </div>
                   </div>
                 </li>
+                
+                {/* Website Installation Method */}
+                <div className={`pl-6 border-l border-indigo-500/20 ${macInstallMethod === 'website' ? 'block' : 'hidden'}`}>
+                  <h4 className="text-indigo-400 font-medium mb-3">Website Installation</h4>
+                  <ol className="space-y-4">
+                    <li className="flex">
+                      <span className="flex-shrink-0 font-bold text-indigo-400 mr-3">1.</span>
+                      <div>
+                        <p className="font-medium">Download the installer</p>
+                        <p className="mt-1 text-gray-400">Visit the official website Screenpipe website (<a href="https://screenpi.pe/" className="text-indigo-400 hover:text-indigo-300">screenpipe.pe</a>) and download the latest version.</p>
+                      </div>
+                    </li>
+                    
+                  </ol>
+                </div>
+                
+                {/* CLI Installation Method */}
+                <div className={`pl-6 border-l border-indigo-500/20 ${macInstallMethod === 'cli' ? 'block' : 'hidden'}`}>
+                  <h4 className="text-indigo-400 font-medium mb-3">CLI Installation</h4>
+                  <ol className="space-y-4">
+                    <li className="flex">
+                      <span className="flex-shrink-0 font-bold text-indigo-400 mr-3">1.</span>
+                      <div>
+                        <p className="font-medium">Open Terminal</p>
+                        <p className="mt-1 text-gray-400">Launch Terminal from anywhere on your system.</p>
+                      </div>
+                    </li>
+                    <li className="flex">
+                      <span className="flex-shrink-0 font-bold text-indigo-400 mr-3">2.</span>
+                      <div>
+                        <p className="font-medium">Install with Command</p>
+                        <p className="mt-1 text-gray-400">Run the command: <code className="bg-gray-800 px-2 py-0.5 rounded">curl -fsSL get.screenpi.pe/cli | sh</code></p>
+                      </div>
+                    </li>
+                    <li className="flex">
+                      <span className="flex-shrink-0 font-bold text-indigo-400 mr-3">3.</span>
+                      <div>
+                        <p className="font-medium">Verify installation</p>
+                        <p className="mt-1 text-gray-400">Run <code className="bg-gray-800 px-2 py-0.5 rounded">screenpipe</code> to confirm successful installation.</p>
+                      </div>
+                    </li>
+                  </ol>
+                </div>
+                
                 <li className="flex">
                   <span className="flex-shrink-0 font-bold text-indigo-400 mr-3">2.</span>
                   <div>
-                    <p className="font-medium">Open the downloaded DMG file</p>
-                    <p className="mt-1 text-gray-400">Locate the downloaded file in your Downloads folder and double-click to open it.</p>
+                    <p className="font-medium">Download Coincentrate</p>
+                    <p className="mt-1 text-gray-400">Dowload the .dmg file from the button above and install it on your system.</p>
                   </div>
                 </li>
                 <li className="flex">
                   <span className="flex-shrink-0 font-bold text-indigo-400 mr-3">3.</span>
-                  <div>
-                    <p className="font-medium">Drag to Applications</p>
-                    <p className="mt-1 text-gray-400">Drag the Coincentrate icon to the Applications folder shortcut to install.</p>
-                  </div>
-                </li>
-                <li className="flex">
-                  <span className="flex-shrink-0 font-bold text-indigo-400 mr-3">4.</span>
                   <div>
                     <p className="font-medium">Launch Coincentrate</p>
                     <p className="mt-1 text-gray-400">Open your Applications folder and launch Coincentrate to get started.</p>
@@ -226,26 +280,45 @@ export default function LandingPage() {
                 <li className="flex">
                   <span className="flex-shrink-0 font-bold text-blue-400 mr-3">1.</span>
                   <div>
-                    <p className="font-medium">Download the installer</p>
-                    <p className="mt-1 text-gray-400">Click the "Download for Windows" button above to get the latest version of Coincentrate.</p>
+                    <p className="font-medium">Install Screenpipe via CLI</p>
+                    <p className="mt-1 text-gray-400">Screenpipe is only available via CLI installation on Windows.</p>
                   </div>
                 </li>
+                
                 <li className="flex">
                   <span className="flex-shrink-0 font-bold text-blue-400 mr-3">2.</span>
                   <div>
-                    <p className="font-medium">Run the installer</p>
-                    <p className="mt-1 text-gray-400">Locate the downloaded .exe file and double-click to run the installer.</p>
+                    <p className="font-medium">Open PowerShell</p>
+                    <p className="mt-1 text-gray-400">Launch PowerShell as Administrator.</p>
                   </div>
                 </li>
+                
                 <li className="flex">
                   <span className="flex-shrink-0 font-bold text-blue-400 mr-3">3.</span>
                   <div>
-                    <p className="font-medium">Follow setup instructions</p>
-                    <p className="mt-1 text-gray-400">Accept the terms and choose your installation preferences.</p>
+                    <p className="font-medium">Install with Command</p>
+                    <p className="mt-1 text-gray-400">Run the command: <code className="bg-gray-800 px-2 py-0.5 rounded">iwr get.screenpi.pe/cli.ps1 | iex</code></p>
                   </div>
                 </li>
+                
                 <li className="flex">
                   <span className="flex-shrink-0 font-bold text-blue-400 mr-3">4.</span>
+                  <div>
+                    <p className="font-medium">Verify installation</p>
+                    <p className="mt-1 text-gray-400">Run <code className="bg-gray-800 px-2 py-0.5 rounded">screenpipe</code> to confirm successful installation.</p>
+                  </div>
+                </li>
+                
+                <li className="flex">
+                  <span className="flex-shrink-0 font-bold text-blue-400 mr-3">5.</span>
+                  <div>
+                    <p className="font-medium">Download Coincentrate</p>
+                    <p className="mt-1 text-gray-400">Download the .exe file from the button above and install it on your system.</p>
+                  </div>
+                </li>
+                
+                <li className="flex">
+                  <span className="flex-shrink-0 font-bold text-blue-400 mr-3">6.</span>
                   <div>
                     <p className="font-medium">Launch Coincentrate</p>
                     <p className="mt-1 text-gray-400">Once installation is complete, launch Coincentrate from the Start menu or desktop shortcut.</p>
@@ -325,7 +398,7 @@ export default function LandingPage() {
 
           {/* Image Gallery of Underprivileged Kids */}
           <div className="mt-20">
-            <h3 className="text-2xl font-bold text-white text-center mb-8">Meet the Children You're Helping</h3>
+            <h3 className="text-2xl font-bold text-white text-center mb-8">How your contributions help others</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="relative group overflow-hidden rounded-xl aspect-[4/3]">
