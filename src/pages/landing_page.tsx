@@ -252,19 +252,19 @@ export default function LandingPage() {
                 </div>
                 
                 <li className="flex">
-                  <span className="flex-shrink-0 font-bold text-indigo-400 mr-3">2.</span>
-                  <div>
-                    <p className="font-medium">Download Coincentrate</p>
-                    <p className="mt-1 text-gray-400">Dowload the .dmg file from the button above and install it on your system.</p>
-                  </div>
-                </li>
-                <li className="flex">
-                  <span className="flex-shrink-0 font-bold text-indigo-400 mr-3">3.</span>
-                  <div>
-                    <p className="font-medium">Launch Coincentrate</p>
-                    <p className="mt-1 text-gray-400">Open your Applications folder and launch Coincentrate to get started.</p>
-                  </div>
-                </li>
+  <span className="font-bold text-indigo-400 mr-3">2.</span>
+  <div>
+    <p className="font-medium">Setup Coincentrate</p>
+    <ul className="mt-1 text-gray-400 list-disc list-inside ml-4 space-y-1">
+      <li>Download the .dmg file from the button above and install it.</li>
+      <li>
+        <span className="bg-green-500/20 text-green-400 text-xs px-2 py-0.5 rounded mr-2">Recommended</span>
+        Follow the instructions in our <a href="https://github.com/sarthakkjha/session-success-stack" className="text-indigo-400 hover:text-indigo-300">GitHub repository</a> to run it in development mode.
+      </li>
+    </ul>
+  </div>
+</li>
+
               </ol>
             </div>
             
@@ -318,16 +318,8 @@ export default function LandingPage() {
                 <li className="flex">
                   <span className="flex-shrink-0 font-bold text-blue-400 mr-3">5.</span>
                   <div>
-                    <p className="font-medium">Download Coincentrate</p>
-                    <p className="mt-1 text-gray-400">Download the .exe file from the button above and install it on your system.</p>
-                  </div>
-                </li>
-                
-                <li className="flex">
-                  <span className="flex-shrink-0 font-bold text-blue-400 mr-3">6.</span>
-                  <div>
-                    <p className="font-medium">Launch Coincentrate</p>
-                    <p className="mt-1 text-gray-400">Once installation is complete, launch Coincentrate from the Start menu or desktop shortcut.</p>
+                    <p className="font-medium">Setup Coincentrate</p>
+                    <p className="mt-1 text-gray-400">Visit our <a href="https://github.com/sarthakkjha/session-success-stack" className="text-blue-400 hover:text-blue-300">GitHub repository</a> and follow the instructions in the README to install and run Coincentrate in development mode.</p>
                   </div>
                 </li>
               </ol>
